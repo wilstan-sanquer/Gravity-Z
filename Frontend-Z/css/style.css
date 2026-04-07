@@ -1,3 +1,104 @@
 * {
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.el-pataf {
+    width: 100vw;
+    height: 100vh;
+    position: relative; 
+    overflow: hidden;
+    background-color: #000;
+}
+
+.el-pataf > img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.ch-comptoir {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 250px;
+    background: #E6D0B2;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ch-comptoir p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.settings, .poids, .rayon, .preset, .elements, .infos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.elements {
+    color: #ffce00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.golf, .ground, .panneau {
+    position: absolute;
+    z-index: 5;
+}
+
+.golf {
+    bottom: 33px;  
+    right: 215px;
+    transform: translateX(-50%);
+    width: 115px;
+}
+
+.golf img { width: 100%; }
+
+.ground {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.settings {
+    display: inline;
+}
+
+img.settings {
+    width: 30px;
+    height: auto;
+}
+
+.ground img { 
+    width: 100%; 
+    display: block; 
+}
+
+.panneau {
+    bottom: 33px;
+    left: 150px;
+    width: 350px;
+}
+
+.panneau img { width: 100%; }
+
+img.rayon {
+    width: 20px;
+    height: auto;
 }
