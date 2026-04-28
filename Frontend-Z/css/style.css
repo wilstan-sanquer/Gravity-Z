@@ -2,13 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .el-pataf {
     width: 100vw;
     height: 100vh;
-    position: relative; 
+    position: relative;
     overflow: hidden;
     background-color: #000;
 }
@@ -23,36 +22,151 @@
     z-index: 1;
 }
 
-
 .ch-comptoir {
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 10;
-    width: 250px;
-    background: #E6D0B2;
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 240px;
+    background: #f0ddb8;
+    padding: 14px 16px 16px;
+    border-radius: 14px;
+    border: 10px solid #7E4D3E;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.ch-comptoir p {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.settings, .poids, .rayon, .preset, .elements, .infos {
+.header-panel {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+}
+
+.header-panel img.settings {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.header-panel p.settings {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: #4a2410;
+    margin: 0;
+}
+
+.divider {
+    border: none;
+    border-top: 1.5px solid #6b3a1f;
+    margin: 4px 0;
+}
+
+.poids {
+    font-size: 12px;
+    font-weight: 800;
+    color: #4a2410;
+    margin: 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background: #c9a97a;
+    outline: none;
+    cursor: pointer;
+    margin: 2px 0 4px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #7a4422;
+    border: 2px solid #4a2410;
+    cursor: pointer;
+}
+
+.rayon-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid #C4B39D;
+    background: #C4B39D;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+.rayon {
+    font-size: 12px;
+    font-weight: 800;
+    color: #4a2410;
+    margin: 0;
+}
+
+img.rayon-lock {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.preset {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #4a2410;
+    margin: 0;
+}
+
+.preset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
 }
 
 .elements {
-    color: #ffce00;
-    font-weight: bold;
+    padding: 7px 0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0;
     cursor: pointer;
+}
+
+.elements.eau   { background: #3E6E7E; color: #f0ddb8; }
+.elements.lave  { background: #7E3E3E; color: #f0ddb8; }
+.elements.plond { background: #5E5E5E; color: #f0ddb8; }
+.elements.plume { background: #ffffff; color: #000; border: 1.5px solid #c9a97a; }
+
+.retour {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: #4a2410;
+    margin: 0;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 800;
+    color: #4a2410;
+    margin: 0;
+}
+
+.infos span {
+    font-weight: 900;
 }
 
 .golf, .ground, .panneau {
@@ -61,7 +175,7 @@
 }
 
 .golf {
-    bottom: 33px;  
+    bottom: 33px;
     right: 215px;
     transform: translateX(-50%);
     width: 115px;
@@ -76,18 +190,9 @@
     z-index: 4;
 }
 
-.settings {
-    display: inline;
-}
-
-img.settings {
-    width: 30px;
-    height: auto;
-}
-
-.ground img { 
-    width: 100%; 
-    display: block; 
+.ground img {
+    width: 100%;
+    display: block;
 }
 
 .panneau {
@@ -98,7 +203,22 @@ img.settings {
 
 .panneau img { width: 100%; }
 
-img.rayon {
-    width: 20px;
-    height: auto;
+.ch-comptoir::before,
+.ch-comptoir::after {
+    content: '';
+    position: absolute;
+    right: -30px;  
+    width: 30px;
+    height: 12px;
+    background: #7E4D3E;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.ch-comptoir::before {
+    top: 10%; 
+}
+
+.ch-comptoir::after {
+    top: 80%;          
 }

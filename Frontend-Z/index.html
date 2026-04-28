@@ -11,20 +11,40 @@
         <img src="img/background.png" alt="background-IMG">
         
         <div class="ch-comptoir">
-            <img class="settings" src="img/settings.png" alt="settings icon">
-            <p class="settings">Paramétrer</p>
-            <p class="poids">Poids</p>
-            <p class="rayon">Rayon</p>
-            <img class="rayon" src="img/lock.png" alt="cadenas icon">
-            <p class="preset">Preset</p>
-            <p class="elements">EAU</p>
-            <p class="elements">LAVE</p>
-            <p class="elements">PLOND</p>
-            <p class="elements">PLUMES</p>
-            <p class="infos">RETOUR SUR LA CHUTE</p>
-            <p class="infos">DUREE TOTALE</p>
-            <p class="infos">VITESSE MAX</p>
-            <p class="infos">FORCE DE CONTACT</p>
+            <div class="header-panel">
+                <img class="settings" src="img/settings.png" alt="settings icon">
+                <p class="settings">Paramétrer</p>
+            </div>
+            <div class="patte gauche"></div>
+
+            
+
+            <hr class="divider">
+
+            <p class="poids">POID : 55 KG</p>
+            <input type="range" class="slider" min="1" max="100" value="55">
+
+            <div class="rayon-row">
+                <p class="rayon">RAYON : 50 CM</p>
+                <img class="rayon-lock" src="img/lock.png" alt="cadenas icon">
+            </div>
+
+            <p class="preset">PRESET</p>
+            <hr class="divider">
+            <div class="preset-grid">
+            <p class="elements eau">EAU</p>
+            <p class="elements lave">LAVE</p>
+            <p class="elements plond">PLOND</p>
+            <p class="elements plume">PLUME</p>
+            </div>
+
+            <p class="retour">RETOUR SUR LA CHUTE</p>
+            <hr class="divider">
+            <p class="infos">DURÉE TOTALE: <span>55 s</span></p>
+            <p class="infos">VITESSE MAX: <span>5 m/s</span></p>
+            <p class="infos">FORCE DE CONTACT: <span>5 j</span></p>
+
+            <div class="patte droite"></div>
         </div>
 
         <div class="golf">

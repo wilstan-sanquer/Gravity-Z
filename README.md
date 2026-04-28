@@ -35,13 +35,13 @@ Le tout propulsé par une communication WebSocket entre un frontend web et un se
 ## 📁 Structure du projet
 
     GRAVITY-Z/
-    ├── Frontend-Z/              # Frontend (HTML, CSS, JavaScript)
+    ├── Frontend-Z/          # Frontend (HTML, CSS, JavaScript)
     │   ├── css/             # Feuilles de style (.css)
     │   ├── img/             # Images et icônes
     │   └── js/              # Scripts JavaScript (.js)
     │
-    ├── Backend-Z/              # Backend (C++/Qt)
-    │             # Code source C++ (.cpp, .h, .pro)
+    ├── Backend-Z/           # Backend (C++/Qt)
+    │                        # Code source C++ (.cpp, .h, .pro)
     │
     ├── .gitignore
     └── README.md
@@ -53,8 +53,8 @@ Le tout propulsé par une communication WebSocket entre un frontend web et un se
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/m0bley-git" style="text-decoration: none;">
-        <img src="https://github.com/m0bley-git.png" width="100px;" alt="m0bley-git"/><br />
+      <a href="https://github.com/sawlvl" style="text-decoration: none;">
+        <img src="https://github.com/sawlvl.png" width="100px;" alt="sawlvl"/><br />
         <sub><b>Wilstan</b></sub><br/>
         <sub>Dev Frontend</sub>
       </a>
