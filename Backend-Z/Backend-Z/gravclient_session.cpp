@@ -66,7 +66,8 @@ void gravClient_Session::onMessageReceived(const QString &message)
                 this->sendMessage(jsonString);
 
             }
-
+            this->sendMessage( ball->grav_report());
+           ;
         }
     }
 }
