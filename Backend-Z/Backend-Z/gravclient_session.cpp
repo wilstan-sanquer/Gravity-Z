@@ -51,9 +51,11 @@ void gravClient_Session::onMessageReceived(const QString &message)
             qDebug() << "création de balle a X : "<< X <<" Y: "<< Y;
             qDebug() << ". la balle a comme mass" << mass << "et sont coefficient de frener est de " << coefficient_f ;
             grav_ball *ball = new grav_ball(X,Y,mass,coefficient_f);
-            while (ball->get_Y()==0){
+
+            while (ball->get_Y() > 0) {
                 float new_y = ball->calcule_grav();
                 qDebug() << new_y ;
+                qDebug() << "vitesse : "; qDebug() << ball->get_v();
 
                 QJsonObject jsonObj;
                 jsonObj["id"] = 1;
@@ -67,6 +69,8 @@ void gravClient_Session::onMessageReceived(const QString &message)
 
             }
             this->sendMessage( ball->grav_report());
+
+            delete ball;
            ;
         }
     }
