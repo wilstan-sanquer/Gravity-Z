@@ -53,8 +53,8 @@ Le tout propulsé par une communication WebSocket entre un frontend web et un se
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/sawlvl" style="text-decoration: none;">
-        <img src="https://github.com/sawlvl.png" width="100px;" alt="sawlvl"/><br />
+      <a href="https://github.com/wilstan-sanquer" style="text-decoration: none;">
+        <img src="https://github.com/wilstan-sanquer.png" width="100px;" alt="sawlvl"/><br />
         <sub><b>Wilstan</b></sub><br/>
         <sub>Dev Frontend</sub>
       </a>
