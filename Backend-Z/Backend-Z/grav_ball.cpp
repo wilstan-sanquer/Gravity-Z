@@ -16,26 +16,24 @@ grav_ball::grav_ball(float X,float Y,float mass,float coefficient_f){
 
 float grav_ball::calcule_grav()
 {
-    float dt = 0.05f;
-    float g = 9.81f;
-    float rho = 1.2f;
-    float S = 0.785f; // Surface de la balle
+    const float dt    = 1.0f / 60.0f;
+    const float g     = 9.81f;
+    const float rho   = 1.2f;
+    const float S     = 0.785f;
+    const float SCALE = 100.0f;
 
-    float fg = m_mass * g; // Poids
+    float ft = 0.0f;
+    if (m_v != 0.0f)
+        ft = 0.5f * rho * m_v * m_v * S * m_coefficient_f
+             * (-1.0f) * m_v / std::abs(m_v);
 
-    // CORRECTION: std::abs(m_v) permet à la force de frottement de toujours s'opposer au sens du mouvement
-    float ft = 0.5f * rho * std::abs(m_v) * m_v * S * m_coefficient_f;
-
-    float acceleration = (fg - ft) / m_mass;
-
-    m_v += acceleration * dt;
-    m_Y -= 0.5f * m_v * dt * dt;
+    float acceleration = ((m_mass * g) - ft) / m_mass;
+    m_v              += acceleration * dt;
+    m_Y              += m_v * (SCALE * dt);
     m_simulated_time += dt;
-    if (m_v > m_v_max) {
-        m_v_max = m_v;
-    }
 
-    if (m_Y < 0) m_Y = 0;
+    if (std::abs(m_v) > m_v_max)
+        m_v_max = std::abs(m_v);
 
     return m_Y;
 }

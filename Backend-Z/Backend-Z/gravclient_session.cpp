@@ -49,7 +49,7 @@ void gravClient_Session::onMessageReceived(const QString &message)
 
 
             qDebug() << "création de balle a X : "<< X <<" Y: "<< Y;
-            qDebug() << ". la balle a comme mass" << mass << "et sont coefficient de frener est de " << coefficient_f ;
+            qDebug() << ". la balle a comme masse" << mass << "et sont coefficient de frenage est de " << coefficient_f ;
             grav_ball *ball = new grav_ball(X,Y,mass,coefficient_f);
 
             while (ball->get_Y() > 0) {
